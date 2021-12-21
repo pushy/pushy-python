@@ -65,7 +65,7 @@ def on_connect(client, userdata, flags, rc):
     print('[Pushy] Connected successfully (device token ' + localStorage.get(config['storageKeys']['token']) + ')')
 
     # Check if connection listener defined & invoke it
-    if 'connectionListener' in locals():
+    if 'connectionListener' in globals():
         connectionListener()
 
 # Callback for when the MQTT client disconnects
@@ -74,13 +74,13 @@ def on_disconnect(client, userdata, msg):
     print('[Pushy] Disconnected from server')
     
     # Check if disconnection listener defined & invoke it
-    if 'disconnectionListener' in locals():
+    if 'disconnectionListener' in globals():
         disconnectionListener()
 
 # Callback for when the MQTT client receives a notification
 def on_message(client, userdata, msg):
     # Check if notification listener defined, otherwise do nothing
-    if 'notificationListener' in locals():
+    if 'notificationListener' in globals():
         # Decode payload into UTF-8 string
         message = msg.payload.decode('utf-8')
 
