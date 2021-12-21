@@ -1,6 +1,6 @@
 import pushy.lib.api as api
 import pushy.lib.mqtt as mqtt
-from pushy.util.config import config
+from pushy.config import config
 import pushy.util.localStorage as localStorage
 
 def listen():

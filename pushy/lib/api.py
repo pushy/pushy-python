@@ -1,6 +1,6 @@
 import requests
 import pushy.util.localStorage as localStorage
-from pushy.util.config import config
+from pushy.config import config
 
 def getApiHost():
     # Development API endpoint for localhost

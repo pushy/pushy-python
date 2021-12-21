@@ -2,7 +2,7 @@ import json
 import time
 import ssl
 import pushy
-from pushy.util.config import config
+from pushy.config import config
 import paho.mqtt.client as mqtt
 import pushy.util.localStorage as localStorage
 
