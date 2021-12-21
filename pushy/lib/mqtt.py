@@ -45,15 +45,37 @@ def setNotificationListener(listener):
     # Store reference to listener callback method
     notificationListener = listener
 
+def setConnectionListener(listener):
+    # Set global variable
+    global connectionListener
+
+    # Store reference to listener callback method
+    connectionListener = listener
+
+def setDisconnectionListener(listener):
+    # Set global variable
+    global disconnectionListener
+
+    # Store reference to listener callback method
+    disconnectionListener = listener
+
 # Callback for when the MQTT client connects successfully
 def on_connect(client, userdata, flags, rc):
     # Log connection success to console
     print('[Pushy] Connected successfully (device token ' + localStorage.get(config['storageKeys']['token']) + ')')
 
+    # Check if connection listener defined & invoke it
+    if connectionListener:
+        connectionListener()
+
 # Callback for when the MQTT client disconnects
 def on_disconnect(client, userdata, msg):
     # Log disconnection to console
     print('[Pushy] Disconnected from server')
+    
+    # Check if disconnection listener defined & invoke it
+    if disconnectionListener:
+        disconnectionListener()
 
 # Callback for when the MQTT client receives a notification
 def on_message(client, userdata, msg):

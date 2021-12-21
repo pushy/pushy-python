@@ -110,6 +110,14 @@ def register(options):
 def setNotificationListener(listener):
     # Store reference to listener
     mqtt.setNotificationListener(listener)
+    
+def setConnectionListener(listener):
+    # Store reference to listener
+    mqtt.setConnectionListener(listener)
+
+def setDisconnectionListener(listener):
+    # Store reference to listener
+    mqtt.setDisconnectionListener(listener)
 
 def loop_forever():
     # Avoid program termination
