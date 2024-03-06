@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='pushy-python',
-    version='1.0.10',
+    version='1.0.11',
     description='The official Pushy SDK for Python apps.',
     long_description='The official Pushy SDK for Python apps.',
     long_description_content_type='text/plain',

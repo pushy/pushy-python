@@ -4,7 +4,7 @@ import configparser
 config_string = """
 [sdk]
 # Pushy Python SDK version code
-version = 1010
+version = 1011
 # SDK platform code
 platform = python
 
