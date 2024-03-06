@@ -16,5 +16,5 @@ setup(
         'Programming Language :: Python :: 3.7',
     ],
     packages=['pushy', 'pushy.lib', 'pushy.util'],
-    install_requires=['paho-mqtt']
+    install_requires=['paho-mqtt==1.6.1']
 )
