@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='pushy-python',
-    version='1.0.11',
+    version='1.0.12',
     description='The official Pushy SDK for Python apps.',
     long_description=(pathlib.Path(__file__).parent / 'README.md').read_text(),
     long_description_content_type='text/markdown',
