@@ -5,8 +5,8 @@ setup(
     name='pushy-python',
     version='1.0.10',
     description='The official Pushy SDK for Python apps.',
-    long_description=(pathlib.Path(__file__).parent / 'README.md').read_text(),
-    long_description_content_type='text/markdown',
+    long_description='The official Pushy SDK for Python apps.',
+    long_description_content_type='text/plain',
     url='https://github.com/pushy/pushy-python',
     author='Pushy',
     author_email='support@pushy.me',
@@ -16,5 +16,5 @@ setup(
         'Programming Language :: Python :: 3.7',
     ],
     packages=['pushy', 'pushy.lib', 'pushy.util'],
-    install_requires=['paho-mqtt==1.6.1']
+    install_requires=['paho-mqtt==1.6.1', 'requests', 'pathlib']
 )
